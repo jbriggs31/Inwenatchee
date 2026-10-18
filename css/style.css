@@ -86,6 +86,8 @@ main { padding: 2rem 1.25rem 3rem; }
 .item h2 { margin: 0 0 .3rem; font-size: 1.35rem; color: var(--river); }
 .meta { margin: 0 0 .6rem; font-size: .92rem; color: #5b6770; font-weight: 600; }
 .item a { font-weight: 600; }
+.photos { display: grid; gap: 1rem; margin-top: 1rem; }
+.photos img { display: block; width: 100%; height: auto; border-radius: 10px; }
 
 /* Callout box */
 .callout { margin-top: 2.5rem; background: linear-gradient(135deg, #fff4f4, #eef6fa); border: 1px solid #e3d6c3; border-radius: var(--radius); padding: 1.5rem 1.75rem; }
@@ -96,7 +98,7 @@ main { padding: 2rem 1.25rem 3rem; }
 .site-footer p { margin: .3rem 0; }
 
 /* ---------- Mobile ---------- */
-@media (max-width: 700px) {
+@media (max-width: 860px) {
   .nav { flex-wrap: wrap; }
   .nav-toggle { display: block; }
   .nav-links { display: none; width: 100%; flex-direction: column; gap: .5rem; padding-top: .8rem; }

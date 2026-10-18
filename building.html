@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>What's Being Built | Wenatchee Visitor Guide</title>
+  <meta name="description" content="A visitor guide to Wenatchee, WA and the surrounding area.">
+  <!-- Shared stylesheet for every page -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="building">
+
+  <!-- ===== Site header & navigation (same on every page) ===== -->
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="index.html">🍎 Wenatchee Guide</a>
+      <!-- Mobile menu button; toggled by js/main.js -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" data-nav="home">Home</a></li>
+        <li><a href="events.html" data-nav="events">Events</a></li>
+        <li><a href="outdoors.html" data-nav="outdoors">Outdoors</a></li>
+        <li><a href="food.html" data-nav="food">Food &amp; Drink</a></li>
+        <li><a href="building.html" data-nav="building">What's Being Built</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== Hero: background is a CSS gradient + inline SVG hills ===== -->
+  <section class="hero">
+    <div class="container hero-text">
+      <h1>What's Being Built</h1>
+      <p>Construction around the Wenatchee Valley.</p>
+    </div>
+    <svg class="hills" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 110 C240 40 420 140 720 80 S1200 30 1440 90 V160 H0Z" fill="#c9a66b" opacity=".55"/>
+      <path d="M0 130 C300 90 600 160 900 115 S1300 100 1440 125 V160 H0Z" fill="#fdf8f1"/>
+    </svg>
+  </section>
+
+  <main class="container">
+
+    <section class="list">
+      <article class="item">
+        <h2>Affinity living community, East Wenatchee</h2>
+        <p>A new Affinity living community is under construction in East Wenatchee, shown here in October 2026.</p>
+        <div class="photos">
+          <img src="images/construction-1.jpg" width="1600" height="747" loading="lazy" alt="Wide view of a wood-framed multi-story building under construction on a dry grassy site, with stacked materials in front and hills under a cloudy sky behind it.">
+          <img src="images/construction-2.jpg" width="1600" height="747" loading="lazy" alt="Closer view of a wood-framed multi-story building under construction, with workers in hard hats and high-visibility vests and a scissor lift beside the frame, under a blue sky.">
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>An unofficial visitor guide by Jeff Briggs. Details change, so always confirm with the official sites linked on each page.</p>
+      <p>&copy; <span id="year"></span> Wenatchee Visitor Guide</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

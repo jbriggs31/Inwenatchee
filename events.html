@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Events | Wenatchee Visitor Guide</title>
+  <meta name="description" content="A visitor guide to Wenatchee, WA and the surrounding area.">
+  <!-- Shared stylesheet for every page -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="events">
+
+  <!-- ===== Site header & navigation (same on every page) ===== -->
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="index.html">🍎 Wenatchee Guide</a>
+      <!-- Mobile menu button; toggled by js/main.js -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" data-nav="home">Home</a></li>
+        <li><a href="events.html" data-nav="events">Events</a></li>
+        <li><a href="outdoors.html" data-nav="outdoors">Outdoors</a></li>
+        <li><a href="food.html" data-nav="food">Food &amp; Drink</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== Hero: background is a CSS gradient + inline SVG hills ===== -->
+  <section class="hero">
+    <div class="container hero-text">
+      <h1>Events &amp; Happenings</h1>
+      <p>Recurring favorites and seasonal highlights around the valley.</p>
+    </div>
+    <svg class="hills" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 110 C240 40 420 140 720 80 S1200 30 1440 90 V160 H0Z" fill="#c9a66b" opacity=".55"/>
+      <path d="M0 130 C300 90 600 160 900 115 S1300 100 1440 125 V160 H0Z" fill="#fdf8f1"/>
+    </svg>
+  </section>
+
+  <main class="container">
+
+    <section class="list">
+      <article class="item">
+        <h2>Wenatchee Valley Farmers Market</h2>
+        <p class="meta">Saturdays, 8 AM – 1 PM · May to late October · Pybus Public Market, 3 N Worthen St, Wenatchee</p>
+        <p>North Central Washington&#39;s largest farmers market, in the Pybus Public Market parking lot, with local fruit and vegetables, breads, cheeses, honey, crafts and live music. The 2026 season runs through October 31; a winter market is also held in November and December.</p>
+        <a href="https://www.wenatcheefarmersmarket.com/" target="_blank" rel="noopener">wenatcheefarmersmarket.com</a>
+      </article>
+      <article class="item">
+        <h2>Pybus Friday Night Music</h2>
+        <p class="meta">Friday evenings · Pybus Public Market</p>
+        <p>Local musicians play Friday evenings at Pybus Public Market on the riverfront. Performers change each week; see the Pybus events page for who is playing.</p>
+        <a href="https://pybuspublicmarket.org/events-news/" target="_blank" rel="noopener">Pybus events &amp; news</a>
+      </article>
+      <article class="item">
+        <h2>Washington State Apple Blossom Festival</h2>
+        <p class="meta">Each spring (late April – early May) · Memorial Park and downtown Wenatchee</p>
+        <p>Washington&#39;s oldest festival, held during apple blossom season. Expect parades (including the Stemilt Grand Parade and Classy Chassis car parade), a carnival, a food fair, live music and the annual Apple Blossom musical at the Numerica PAC.</p>
+        <a href="https://www.appleblossom.org/festival-calendar" target="_blank" rel="noopener">Festival calendar</a>
+      </article>
+      <article class="item">
+        <h2>Wenatchee Wild Hockey</h2>
+        <p class="meta">Fall – winter season · Town Toyota Center, 1300 Walla Walla Ave, Wenatchee</p>
+        <p>The Wenatchee Wild play WHL hockey at Town Toyota Center. Buy tickets online, in person or by phone through the arena.</p>
+        <a href="https://towntoyotacenter.com/events-tickets/wenatchee-wild/" target="_blank" rel="noopener">Wild schedule &amp; tickets</a>
+      </article>
+      <article class="item">
+        <h2>Numerica Performing Arts Center</h2>
+        <p class="meta">123 N Wenatchee Ave, Wenatchee</p>
+        <p>An intimate 550-seat downtown theater with Broadway and national touring shows, local productions and community events.</p>
+        <a href="https://numericapac.org/" target="_blank" rel="noopener">numericapac.org</a>
+      </article>
+    </section>
+
+    <!-- Reminder to check official calendars -->
+    <section class="callout">
+      <h2>📅 Check the official calendars</h2>
+      <p>Dates, times and lineups change. Please confirm details with the organizers before you go:</p>
+      <ul>
+        <li><a href="https://www.visitwenatchee.org/events" target="_blank" rel="noopener">Visit Wenatchee events calendar</a></li>
+        <li><a href="https://pybuspublicmarket.org/events-news/" target="_blank" rel="noopener">Pybus Public Market events</a></li>
+        <li><a href="https://www.appleblossom.org/festival-calendar" target="_blank" rel="noopener">Apple Blossom Festival calendar</a></li>
+        <li><a href="https://towntoyotacenter.com/events-tickets/wenatchee-wild/" target="_blank" rel="noopener">Town Toyota Center: Wenatchee Wild</a></li>
+        <li><a href="https://numericapac.org/" target="_blank" rel="noopener">Numerica Performing Arts Center</a></li>
+        <li><a href="https://www.missionridge.com/events-calendar/" target="_blank" rel="noopener">Mission Ridge events calendar</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>An unofficial visitor guide by Jeff Briggs. Details change, so always confirm with the official sites linked on each page.</p>
+      <p>&copy; <span id="year"></span> Wenatchee Visitor Guide</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

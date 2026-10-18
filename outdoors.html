@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Outdoors | Wenatchee Visitor Guide</title>
+  <meta name="description" content="A visitor guide to Wenatchee, WA and the surrounding area.">
+  <!-- Shared stylesheet for every page -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="outdoors">
+
+  <!-- ===== Site header & navigation (same on every page) ===== -->
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="index.html">🍎 Wenatchee Guide</a>
+      <!-- Mobile menu button; toggled by js/main.js -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" data-nav="home">Home</a></li>
+        <li><a href="events.html" data-nav="events">Events</a></li>
+        <li><a href="outdoors.html" data-nav="outdoors">Outdoors</a></li>
+        <li><a href="food.html" data-nav="food">Food &amp; Drink</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== Hero: background is a CSS gradient + inline SVG hills ===== -->
+  <section class="hero">
+    <div class="container hero-text">
+      <h1>Get Outside</h1>
+      <p>Shrub-steppe foothills, a big river and mountains on the doorstep.</p>
+    </div>
+    <svg class="hills" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 110 C240 40 420 140 720 80 S1200 30 1440 90 V160 H0Z" fill="#c9a66b" opacity=".55"/>
+      <path d="M0 130 C300 90 600 160 900 115 S1300 100 1440 125 V160 H0Z" fill="#fdf8f1"/>
+    </svg>
+  </section>
+
+  <main class="container">
+
+    <section class="list">
+      <article class="item">
+        <h2>Saddle Rock</h2>
+        <p class="meta">Wenatchee Foothills · Chelan-Douglas Land Trust</p>
+        <p>The rocky landmark at the south end of the Wenatchee foothills, with sweeping views over the city and the Columbia River. It&#39;s a short, steep climb that is especially popular at sunset and during spring wildflower season.</p>
+        <a href="https://www.cdlandtrust.org/trails-access/trails/wenatchee-foothills-trails/saddle-rock-trails" target="_blank" rel="noopener">Saddle Rock trails info</a>
+      </article>
+      <article class="item">
+        <h2>Sage Hills</h2>
+        <p class="meta">Wenatchee Foothills · hiking, running, biking, horses</p>
+        <p>A network of multi-use trails through the foothills. The main Sage Hills Trail runs about 4.5 miles to the Horse Lake Trailhead with roughly 1,300 ft of gain. Foothills trails north of 5th Street close each year from December 1 to April 1 to protect wildlife habitat. Check the Land Trust page for current conditions and trailhead notes.</p>
+        <a href="https://www.cdlandtrust.org/trails-access/trails/wenatchee-foothills-trails/sage-hills-trails" target="_blank" rel="noopener">Sage Hills trails info</a>
+      </article>
+      <article class="item">
+        <h2>Apple Capital Loop Trail</h2>
+        <p class="meta">Wenatchee &amp; East Wenatchee · paved, multi-use</p>
+        <p>A 10-mile paved loop along both shores of the Columbia River, connecting riverfront parks in Wenatchee with natural habitat on the East Wenatchee side. With the Rocky Reach Trail it adds up to more than 20 miles of paved path, great for walking, running, skating and cycling.</p>
+        <a href="https://www.chelanpud.org/parks-and-recreation/our-parks/apple-capital-loop-trail" target="_blank" rel="noopener">Chelan PUD: Loop Trail</a>
+      </article>
+      <article class="item">
+        <h2>Mission Ridge Ski &amp; Board Resort</h2>
+        <p class="meta">7500 Mission Ridge Rd, Wenatchee</p>
+        <p>Wenatchee&#39;s local ski area, a scenic drive up from town, known for its sunny days and dry snow. In the off-season it hosts events like the fall Tamarack Festival.</p>
+        <a href="https://www.missionridge.com/" target="_blank" rel="noopener">missionridge.com</a>
+      </article>
+      <article class="item">
+        <h2>The Columbia River</h2>
+        <p class="meta">Riverfront parks, boating &amp; fishing</p>
+        <p>The river is the valley&#39;s centerpiece. Chelan PUD runs riverfront parks, including Wenatchee Riverfront Park and Walla Walla Point Park, along with campgrounds such as Wenatchee Confluence and Lincoln Rock State Parks.</p>
+        <a href="https://www.chelanpud.org/parks-and-recreation/our-parks" target="_blank" rel="noopener">Chelan PUD parks</a>
+      </article>
+    </section>
+
+    <h2 class="section-title">Day Trips</h2>
+    <section class="cards">
+      <a class="card card-hills" href="https://www.leavenworth.org/" target="_blank" rel="noopener">
+        <span class="card-icon" aria-hidden="true">🏔️</span>
+        <h3>Leavenworth</h3>
+        <p>A Bavarian-style village up the Wenatchee River at the foot of the Cascades, with hiking, river floats and festivals.</p>
+        <span class="card-link">leavenworth.org →</span>
+      </a>
+      <a class="card card-river" href="https://www.lakechelan.com/" target="_blank" rel="noopener">
+        <span class="card-icon" aria-hidden="true">🚤</span>
+        <h3>Lake Chelan</h3>
+        <p>A long, deep glacier-fed lake to the north, ringed by beaches, parks and wineries.</p>
+        <span class="card-link">lakechelan.com →</span>
+      </a>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>An unofficial visitor guide by Jeff Briggs. Details change, so always confirm with the official sites linked on each page.</p>
+      <p>&copy; <span id="year"></span> Wenatchee Visitor Guide</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

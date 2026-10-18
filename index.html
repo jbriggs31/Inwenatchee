@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home | Wenatchee Visitor Guide</title>
+  <meta name="description" content="A visitor guide to Wenatchee, WA and the surrounding area.">
+  <!-- Shared stylesheet for every page -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+
+  <!-- ===== Site header & navigation (same on every page) ===== -->
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="index.html">🍎 Wenatchee Guide</a>
+      <!-- Mobile menu button; toggled by js/main.js -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" data-nav="home">Home</a></li>
+        <li><a href="events.html" data-nav="events">Events</a></li>
+        <li><a href="outdoors.html" data-nav="outdoors">Outdoors</a></li>
+        <li><a href="food.html" data-nav="food">Food &amp; Drink</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== Hero: background is a CSS gradient + inline SVG hills ===== -->
+  <section class="hero">
+    <div class="container hero-text">
+      <h1>Welcome to the Wenatchee Valley</h1>
+      <p>Apples, the Columbia River and sun-soaked hills, plus Leavenworth, Lake Chelan and Mission Ridge close by.</p>
+    </div>
+    <svg class="hills" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 110 C240 40 420 140 720 80 S1200 30 1440 90 V160 H0Z" fill="#c9a66b" opacity=".55"/>
+      <path d="M0 130 C300 90 600 160 900 115 S1300 100 1440 125 V160 H0Z" fill="#fdf8f1"/>
+    </svg>
+  </section>
+
+  <main class="container">
+
+    <!-- Intro -->
+    <section class="intro">
+      <h2>The Apple Capital of the World</h2>
+      <p>Wenatchee and East Wenatchee face each other across the Columbia River in the heart of Washington State. Spend your mornings at the Saturday farmers market, your afternoons on the paved Apple Capital Loop Trail or in the Sage Hills, and your evenings at a hockey game, a show, or a tasting room. The Bavarian-style village of Leavenworth, Lake Chelan and the slopes of Mission Ridge are all within an easy drive.</p>
+    </section>
+
+    <!-- Cards linking to the other pages -->
+    <section class="cards">
+      <a class="card card-apple" href="events.html">
+        <span class="card-icon" aria-hidden="true">🎉</span>
+        <h3>Events</h3>
+        <p>Farmers market, Friday music at Pybus, Apple Blossom Festival, Wenatchee Wild hockey and shows.</p>
+        <span class="card-link">See events →</span>
+      </a>
+      <a class="card card-river" href="outdoors.html">
+        <span class="card-icon" aria-hidden="true">🥾</span>
+        <h3>Outdoors</h3>
+        <p>Saddle Rock, the Sage Hills, the Loop Trail, Mission Ridge, the Columbia River and more.</p>
+        <span class="card-link">Get outside →</span>
+      </a>
+      <a class="card card-hills" href="food.html">
+        <span class="card-icon" aria-hidden="true">🍷</span>
+        <h3>Food &amp; Drink</h3>
+        <p>Local restaurants, a brewpub, wineries and cideries in the valley.</p>
+        <span class="card-link">Find a table →</span>
+      </a>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>An unofficial visitor guide by Jeff Briggs. Details change, so always confirm with the official sites linked on each page.</p>
+      <p>&copy; <span id="year"></span> Wenatchee Visitor Guide</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

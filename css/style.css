@@ -1,0 +1,105 @@
+/* =========================================================
+   Wenatchee Visitor Guide: shared stylesheet
+   Palette: apple red, river blue, sagebrush/hill tones.
+   Change the colors here and they update everywhere.
+   ========================================================= */
+:root {
+  --apple: #c8102e;        /* Red Delicious */
+  --apple-dark: #8e0b20;
+  --leaf: #6a8f3c;         /* orchard green */
+  --river: #1f5f8b;        /* Columbia River blue */
+  --river-light: #4fa3c7;
+  --hill: #c9a66b;         /* golden foothills */
+  --sage: #9aab89;         /* sagebrush */
+  --cream: #fdf8f1;        /* page background */
+  --ink: #23303a;          /* body text */
+  --radius: 14px;
+  --shadow: 0 6px 20px rgba(35, 48, 58, .12);
+  --max: 1100px;
+}
+
+/* ---------- Base ---------- */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--cream);
+}
+a { color: var(--river); }
+h1, h2, h3 { line-height: 1.2; font-family: Georgia, "Times New Roman", serif; }
+.container { max-width: var(--max); margin: 0 auto; padding: 0 1.25rem; }
+
+/* ---------- Header / nav ---------- */
+.site-header {
+  position: sticky; top: 0; z-index: 10;
+  background: rgba(255, 255, 255, .95);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, .08);
+}
+.nav { display: flex; align-items: center; justify-content: space-between; padding-top: .8rem; padding-bottom: .8rem; }
+.brand { font-weight: 700; font-size: 1.2rem; color: var(--apple); text-decoration: none; }
+.nav-links { list-style: none; display: flex; gap: 1.5rem; margin: 0; padding: 0; }
+.nav-links a { text-decoration: none; color: var(--ink); font-weight: 500; padding: .3rem 0; border-bottom: 2px solid transparent; }
+.nav-links a:hover, .nav-links a.active { color: var(--apple); border-color: var(--apple); }
+.nav-toggle { display: none; background: var(--apple); color: #fff; border: 0; border-radius: 8px; padding: .45rem .9rem; font: inherit; cursor: pointer; }
+
+/* ---------- Hero (gradient sky -> river; SVG hills at bottom) ---------- */
+.hero {
+  position: relative;
+  background: linear-gradient(160deg, var(--river) 0%, var(--river-light) 55%, var(--hill) 100%);
+  color: #fff;
+  padding: 5rem 0 7rem;
+  overflow: hidden;
+}
+.hero-text { position: relative; z-index: 1; }
+.hero h1 { font-size: clamp(2rem, 5vw, 3.4rem); margin: 0 0 .6rem; text-shadow: 0 2px 8px rgba(0,0,0,.25); }
+.hero p { font-size: 1.15rem; max-width: 640px; margin: 0; }
+.hills { position: absolute; bottom: 0; left: 0; width: 100%; height: 120px; }
+
+/* ---------- Content blocks ---------- */
+main { padding: 2rem 1.25rem 3rem; }
+.intro { max-width: 760px; margin: 0 auto 2.5rem; text-align: center; }
+.intro h2, .section-title { color: var(--apple-dark); }
+.section-title { margin-top: 2.5rem; }
+
+/* Cards grid (home page + day trips) */
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+.card {
+  display: block; text-decoration: none; color: var(--ink);
+  background: #fff; border-radius: var(--radius); box-shadow: var(--shadow);
+  padding: 1.6rem; border-top: 6px solid var(--apple);
+  transition: transform .2s, box-shadow .2s;
+}
+.card:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(35,48,58,.18); }
+.card h3 { margin: .4rem 0; font-size: 1.4rem; }
+.card-icon { font-size: 2rem; }
+.card-link { font-weight: 600; color: var(--apple); }
+.card-river { border-top-color: var(--river); }
+.card-river .card-link { color: var(--river); }
+.card-hills { border-top-color: var(--leaf); }
+.card-hills .card-link { color: var(--leaf); }
+
+/* Listing items (events, trails, restaurants) */
+.list { display: grid; gap: 1.25rem; }
+.item { background: #fff; border-radius: var(--radius); box-shadow: var(--shadow); padding: 1.4rem 1.6rem; border-left: 5px solid var(--sage); }
+.item h2 { margin: 0 0 .3rem; font-size: 1.35rem; color: var(--river); }
+.meta { margin: 0 0 .6rem; font-size: .92rem; color: #5b6770; font-weight: 600; }
+.item a { font-weight: 600; }
+
+/* Callout box */
+.callout { margin-top: 2.5rem; background: linear-gradient(135deg, #fff4f4, #eef6fa); border: 1px solid #e3d6c3; border-radius: var(--radius); padding: 1.5rem 1.75rem; }
+.callout h2 { margin-top: 0; color: var(--apple-dark); }
+
+/* ---------- Footer ---------- */
+.site-footer { background: var(--ink); color: #d9e1e6; padding: 1.5rem 0; font-size: .9rem; }
+.site-footer p { margin: .3rem 0; }
+
+/* ---------- Mobile ---------- */
+@media (max-width: 700px) {
+  .nav { flex-wrap: wrap; }
+  .nav-toggle { display: block; }
+  .nav-links { display: none; width: 100%; flex-direction: column; gap: .5rem; padding-top: .8rem; }
+  .nav-links.open { display: flex; }
+  .hero { padding: 3.5rem 0 6rem; }
+}

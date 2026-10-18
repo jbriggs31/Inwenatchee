@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Food & Drink | Wenatchee Visitor Guide</title>
+  <meta name="description" content="A visitor guide to Wenatchee, WA and the surrounding area.">
+  <!-- Shared stylesheet for every page -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="food">
+
+  <!-- ===== Site header & navigation (same on every page) ===== -->
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="index.html">🍎 Wenatchee Guide</a>
+      <!-- Mobile menu button; toggled by js/main.js -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" data-nav="home">Home</a></li>
+        <li><a href="events.html" data-nav="events">Events</a></li>
+        <li><a href="outdoors.html" data-nav="outdoors">Outdoors</a></li>
+        <li><a href="food.html" data-nav="food">Food &amp; Drink</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== Hero: background is a CSS gradient + inline SVG hills ===== -->
+  <section class="hero">
+    <div class="container hero-text">
+      <h1>Food &amp; Drink</h1>
+      <p>Each spot below was checked against its official website in October 2026.</p>
+    </div>
+    <svg class="hills" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 110 C240 40 420 140 720 80 S1200 30 1440 90 V160 H0Z" fill="#c9a66b" opacity=".55"/>
+      <path d="M0 130 C300 90 600 160 900 115 S1300 100 1440 125 V160 H0Z" fill="#fdf8f1"/>
+    </svg>
+  </section>
+
+  <main class="container">
+
+    <h2 class="section-title">Restaurants</h2>
+    <section class="list">
+      <article class="item">
+        <h2>McGlinn&#39;s Public House</h2>
+        <p class="meta">111 Orondo Ave, Wenatchee</p>
+        <p>Wood-fired pizza, hand-pressed burgers and Northwest beer in the historic Garland Building. Open daily for lunch and dinner, with breakfast on weekends.</p>
+        <a href="https://www.mcglinns.com/" target="_blank" rel="noopener">mcglinns.com</a>
+      </article>
+      <article class="item">
+        <h2>Saddle Rock Pub &amp; Brewery</h2>
+        <p class="meta">25 N Wenatchee Ave, Suite 107, Wenatchee</p>
+        <p>A downtown brewpub next to the Performing Arts Center, with craft beer and cider, local wine, and hand-tossed pizza.</p>
+        <a href="https://www.saddlerockbrewery.com/" target="_blank" rel="noopener">saddlerockbrewery.com</a>
+      </article>
+      <article class="item">
+        <h2>The Wild Huckleberry &amp; Huck at Pybus</h2>
+        <p class="meta">302 S Mission St · Huck at Pybus: 3 N Worthen St, Wenatchee</p>
+        <p>A local favorite for breakfast and lunch, plus a full-day spot inside Pybus Public Market. They don&#39;t take reservations.</p>
+        <a href="http://wildhuck.com/" target="_blank" rel="noopener">wildhuck.com</a>
+      </article>
+    </section>
+
+    <h2 class="section-title">Wineries</h2>
+    <section class="list">
+      <article class="item">
+        <h2>Chateau Faire Le Pont</h2>
+        <p class="meta">1 Vineyard Way, Wenatchee · Tasting room: 636 Front St, Leavenworth</p>
+        <p>A winery and restaurant in a renovated 1920s brick building, with an outdoor deck and Cascade views.</p>
+        <a href="https://fairelepont.com/" target="_blank" rel="noopener">fairelepont.com</a>
+      </article>
+      <article class="item">
+        <h2>Crayelle Cellars</h2>
+        <p class="meta">15 N 2nd St, Suite 103, Wenatchee</p>
+        <p>A cozy downtown tasting room that&#39;s handy before a show. Check the website for current tasting hours.</p>
+        <a href="https://www.crayellecellars.com/" target="_blank" rel="noopener">crayellecellars.com</a>
+      </article>
+    </section>
+
+    <h2 class="section-title">Cideries</h2>
+    <section class="list">
+      <article class="item">
+        <h2>Union Hill Cider Co.</h2>
+        <p class="meta">988 S Union Ave, East Wenatchee</p>
+        <p>A family-run cidery using fruit from its own orchards. The family- and pet-friendly taproom has 20 taps.</p>
+        <a href="https://unionhillciderco.com/" target="_blank" rel="noopener">unionhillciderco.com</a>
+      </article>
+      <article class="item">
+        <h2>Snowdrift Cider Co.</h2>
+        <p class="meta">273 S Ward Ave, East Wenatchee</p>
+        <p>An internationally recognized, family-owned craft cidery and orchard with a tasting room.</p>
+        <a href="https://www.snowdriftcider.com/" target="_blank" rel="noopener">snowdriftcider.com</a>
+      </article>
+    </section>
+
+    <section class="callout">
+      <h2>🍽️ Want more?</h2>
+      <p>Visit Wenatchee keeps a full directory of local restaurants, breweries, wineries and cideries.</p>
+      <ul><li><a href="https://www.visitwenatchee.org/eat-drink" target="_blank" rel="noopener">Visit Wenatchee: Eat &amp; Drink</a></li></ul>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>An unofficial visitor guide by Jeff Briggs. Details change, so always confirm with the official sites linked on each page.</p>
+      <p>&copy; <span id="year"></span> Wenatchee Visitor Guide</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

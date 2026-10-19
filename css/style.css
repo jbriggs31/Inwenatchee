@@ -72,6 +72,8 @@ h1, h2, h3 { line-height: 1.2; font-family: Georgia, "Times New Roman", serif; }
 .item .feature-banner { margin: 1rem 0 .85rem; }
 .item .feature-banner img { border-radius: 10px; }
 .item .feature-banner figcaption { max-width: none; padding: .6rem 0 0; }
+.feature-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 0 0 .85rem; }
+.item .feature-row .feature-banner { margin: 0; }
 
 /* ---------- Content blocks ---------- */
 main { padding: 2rem 1.25rem 3rem; }
@@ -121,4 +123,5 @@ main { padding: 2rem 1.25rem 3rem; }
   .nav-links.open { display: flex; }
   .hero { padding: 3.5rem 0 6rem; }
   .feature-banner + .hero { padding-top: 2rem; }
+  .feature-row { grid-template-columns: 1fr; }
 }

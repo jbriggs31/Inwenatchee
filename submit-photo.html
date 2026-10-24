@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Submit a photo | Wenatchee Visitor Guide</title>
+  <meta name="description" content="A visitor guide to Wenatchee, WA and the surrounding area.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- Shared stylesheet for every page -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="submit">
+
+  <!-- ===== Site header & navigation (same on every page) ===== -->
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="index.html" aria-label="InWenatchee home"><img src="images/inwenatchee-logo.png" alt="InWenatchee" height="52"></a>
+      <!-- Mobile menu button; toggled by js/main.js -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" data-nav="home">Home</a></li>
+        <li><a href="events.html" data-nav="events">Events</a></li>
+        <li><a href="outdoors.html" data-nav="outdoors">Outdoors</a></li>
+        <li><a href="ohmegardens.html" data-nav="ohme">Ohme Gardens</a></li>
+        <li><a href="rockyreach.html" data-nav="rocky">Rocky Reach Dam</a></li>
+        <li><a href="food.html" data-nav="food">Food &amp; Drink</a></li>
+        <li><a href="building.html" data-nav="building">What's Being Built</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== Hero: background is a CSS gradient + inline SVG hills ===== -->
+  <section class="hero">
+    <div class="container hero-text">
+      <h1>Submit a photo</h1>
+      <p>Got a great shot of the Wenatchee area? Send it in. Landscape orientation works best: nothing blurry, and no people's faces.</p>
+    </div>
+    <svg class="hills" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 110 C240 40 420 140 720 80 S1200 30 1440 90 V160 H0Z" fill="#c9a66b" opacity=".55"/>
+      <path d="M0 130 C300 90 600 160 900 115 S1300 100 1440 125 V160 H0Z" fill="#fdf8f1"/>
+    </svg>
+  </section>
+
+  <main class="container">
+
+    <noscript>
+      <section class="callout">
+        <h2>Email your photos instead</h2>
+        <p>This form needs JavaScript to resize photos before they are sent. Email JPEG, PNG, or WebP photos (5 MB total) to <a href="mailto:info@inwenatchee.com">info@inwenatchee.com</a>.</p>
+      </section>
+    </noscript>
+
+    <form id="photo-form" class="photo-form item" method="POST" action="https://formsubmit.co/info@inwenatchee.com" enctype="multipart/form-data" hidden>
+      <input type="hidden" name="_subject" value="InWenatchee photo submission">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://inwenatchee.com/thanks-photo.html">
+      <p class="hp-field">
+        <label for="company">Company</label>
+        <input id="company" type="text" name="_honey" tabindex="-1" autocomplete="off">
+      </p>
+
+      <div class="field">
+        <label for="photos">Photos</label>
+        <input id="photos" type="file" name="attachment" accept="image/jpeg,image/png,image/webp" multiple required>
+        <p class="hint">Up to 3 photos. JPEG, PNG, or WebP. Each original file must be 15 MB or less. iPhone HEIC photos should be shared as Most Compatible (JPEG) or converted first. We shrink them in your browser before upload.</p>
+        <ul id="photo-preview" class="photo-preview"></ul>
+        <p id="size-readout" class="size-readout" aria-live="polite"></p>
+        <div id="form-errors" class="form-error" role="alert" aria-live="assertive" tabindex="-1"></div>
+      </div>
+
+      <div class="field">
+        <label for="place">Where was this taken? (place or address, required)</label>
+        <input id="place" name="Where was this taken" type="text" required autocomplete="off">
+      </div>
+
+      <div class="field">
+        <label for="description">Short description (optional)</label>
+        <textarea id="description" name="Description"></textarea>
+      </div>
+
+      <div class="field">
+        <label for="credit">Credit name to show with the photo (optional, leave blank for no credit)</label>
+        <input id="credit" name="Credit name" type="text" autocomplete="name">
+      </div>
+
+      <div class="field">
+        <label for="email">Your email (optional, only so we can reach you about your photo)</label>
+        <input id="email" name="email" type="email" autocomplete="email">
+      </div>
+
+      <div>
+        <h2>Before you send</h2>
+        <ul class="disclaimer">
+          <li>Only submit photos you took yourself, or that you have permission to share.</li>
+          <li>By submitting, you give InWenatchee.com a non-exclusive, royalty-free permission to publish the photo on this site and related pages, and to crop, resize, edit, enhance, and watermark it. You keep ownership of your photo. There is no payment.</li>
+          <li>Submitting does not guarantee publication. A person reviews every photo. We may decline or remove a photo at any time without explanation.</li>
+          <li>Please don't send photos where people are clearly identifiable, especially children, unless you have their OK. Avoid private homes and yards, license plates, house numbers, and anything that shows a private residence. We may crop or reject those photos.</li>
+          <li>Location and GPS data in the photo is removed in your browser before upload, so tell us where it was taken in the form.</li>
+          <li>Your email, if you give one, is used only to reply about your photo. We don't sell or share it. Submissions are delivered by email through FormSubmit, a third-party form service, so the photos and form details pass through their servers.</li>
+          <li>Don't upload anything illegal, offensive, or unrelated to the Wenatchee area. You can send up to 3 photos, each 15 MB or less, as JPEG, PNG, or WebP.</li>
+          <li>This is an independent, unofficial visitor guide, not affiliated with any business, city, or agency shown.</li>
+          <li>To request removal of a published photo, email <a href="mailto:info@inwenatchee.com">info@inwenatchee.com</a>.</li>
+        </ul>
+      </div>
+
+      <label class="consent">
+        <input type="checkbox" name="Consent" value="I have permission to share these photos and agree they may be published and edited on InWenatchee.com, with no payment. I understand publication is not guaranteed." required>
+        <span>I took these photos or have permission to share them, and I give InWenatchee.com permission to publish and edit them as described above. I understand a person reviews submissions and not every photo is published.</span>
+      </label>
+
+      <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+      <button id="submit-photo" class="submit-btn" type="submit">Send photos</button>
+    </form>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>An unofficial visitor guide. Details change, so always confirm with the official sites linked on each page.</p>
+      <p><a href="submit-photo.html">Submit a photo</a></p>
+      <p>&copy; <span id="year"></span> Wenatchee Visitor Guide</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/submit-photo.js"></script>
+</body>
+</html>

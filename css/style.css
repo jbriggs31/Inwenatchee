@@ -112,9 +112,58 @@ main { padding: 2rem 1.25rem 3rem; }
 .callout { margin-top: 2.5rem; background: linear-gradient(135deg, #fff4f4, #eef6fa); border: 1px solid #e3d6c3; border-radius: var(--radius); padding: 1.5rem 1.75rem; }
 .callout h2 { margin-top: 0; color: var(--apple-dark); }
 
+/* ---------- Photo submission ---------- */
+.photo-form { display: grid; gap: 1.1rem; }
+.photo-form h2 { margin-bottom: .2rem; }
+.field label { font-weight: 600; }
+.photo-form input[type="text"],
+.photo-form input[type="email"],
+.photo-form textarea {
+  display: block;
+  width: 100%;
+  margin-top: .35rem;
+  padding: .55rem .7rem;
+  font: inherit;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid #d9cfc2;
+  border-radius: 8px;
+}
+.photo-form textarea { min-height: 6.5rem; resize: vertical; }
+.photo-form input[type="file"] { display: block; width: 100%; margin-top: .35rem; font: inherit; }
+.hint { margin: .35rem 0 0; color: #5b6770; font-size: .92rem; font-weight: 400; }
+.photo-preview { list-style: none; margin: .75rem 0 0; padding: 0; display: grid; gap: .75rem; }
+.photo-preview li { display: grid; grid-template-columns: 72px 1fr; gap: .75rem; align-items: center; }
+.photo-preview img { width: 72px; height: 72px; object-fit: cover; border-radius: 8px; background: var(--cream); }
+.size-readout { margin: .4rem 0 0; font-weight: 600; }
+.disclaimer { margin: 0; padding-left: 1.2rem; }
+.disclaimer li { margin: .45rem 0; }
+.consent { display: flex; gap: .65rem; align-items: flex-start; font-weight: 600; }
+.consent input { flex: none; width: 1.15rem; height: 1.15rem; margin-top: .3rem; }
+.submit-btn {
+  justify-self: start;
+  background: var(--apple);
+  color: #fff;
+  border: 0;
+  border-radius: 8px;
+  padding: .7rem 1.25rem;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+.submit-btn:disabled { opacity: .65; cursor: progress; }
+.submit-btn:focus-visible, .photo-form input:focus-visible, .photo-form textarea:focus-visible {
+  outline: 3px solid var(--river);
+  outline-offset: 2px;
+}
+.form-error { margin: 0; color: var(--apple-dark); font-weight: 600; }
+.form-status { margin: 0; font-weight: 600; }
+.hp-field { display: none; }
+
 /* ---------- Footer ---------- */
 .site-footer { background: var(--ink); color: #d9e1e6; padding: 1.5rem 0; font-size: .9rem; }
 .site-footer p { margin: .3rem 0; }
+.site-footer a { color: #fff; font-weight: 600; }
 
 /* ---------- Mobile ---------- */
 /* Nav collapses before the longer labels wrap onto a second line. */
@@ -131,4 +180,5 @@ main { padding: 2rem 1.25rem 3rem; }
 }
 @media (max-width: 600px) {
   .brand img { height: 44px; }
+  .photo-form { padding: 1.1rem 1rem; }
 }

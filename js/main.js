@@ -1,7 +1,7 @@
 // Wenatchee Visitor Guide: small helper script (no libraries).
 
 // 1) Highlight the nav link for the current page.
-//    Each <body> has data-page="home|events|outdoors|ohme|food|building".
+//    Each <body> has data-page="home|events|outdoors|ohme|rocky|food|building".
 const page = document.body.dataset.page;
 document.querySelectorAll('[data-nav]').forEach((link) => {
   if (link.dataset.nav === page) link.classList.add('active');

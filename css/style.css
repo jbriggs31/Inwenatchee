@@ -38,7 +38,8 @@ h1, h2, h3 { line-height: 1.2; font-family: Georgia, "Times New Roman", serif; }
   box-shadow: 0 1px 8px rgba(0, 0, 0, .08);
 }
 .nav { display: flex; align-items: center; justify-content: space-between; padding-top: .8rem; padding-bottom: .8rem; }
-.brand { font-weight: 700; font-size: 1.2rem; color: var(--apple); text-decoration: none; }
+.brand { font-weight: 700; font-size: 1.2rem; color: var(--apple); text-decoration: none; line-height: 0; }
+.brand img { height: 52px; width: auto; display: block; }
 .nav-links { list-style: none; display: flex; gap: 1.5rem; margin: 0; padding: 0; }
 .nav-links a { text-decoration: none; color: var(--ink); font-weight: 500; padding: .3rem 0; border-bottom: 2px solid transparent; }
 .nav-links a:hover, .nav-links a.active { color: var(--apple); border-color: var(--apple); }
@@ -124,4 +125,7 @@ main { padding: 2rem 1.25rem 3rem; }
   .hero { padding: 3.5rem 0 6rem; }
   .feature-banner + .hero { padding-top: 2rem; }
   .feature-row { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .brand img { height: 44px; }
 }

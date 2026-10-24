@@ -10,7 +10,7 @@ After a change is merged to `main`, GitHub rebuilds the site. It is meant to be 
 
 ## Files
 - `index.html`: home page (hero, intro, cards)
-- `events.html`, `outdoors.html`, `food.html`: content pages
+- `events.html`, `outdoors.html`, `food.html`, `rockyreach.html`: content pages
 - `css/style.css`: shared styles. The color palette lives at the top in `:root`.
 - `js/main.js`: highlights the current nav link, runs the mobile menu and sets the footer year
 - `CNAME`: custom domain (`inwenatchee.com`)
